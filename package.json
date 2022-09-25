@@ -1,19 +1,26 @@
 {
   "name": "css-selector-generator",
-  "displayName": "css selector generator",
+  "displayName": "CSS selector generator",
+  "publisher": "OlamilekanAjibola",
   "description": "Generates CSS with all classes and ids of HTML selected",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.71.0"
   },
   "categories": [
-    "Other"
+    "Formatters"
+  ],
+  "keywords": [
+    "css", "CSS", "Selector", "generator", "Generator"
   ],
   "activationEvents": [
     "onCommand:css-selector-generator.initialize",
     "onFileSystem:css",
     "onLanguage:css",
-    "*",
+    "onLanguage:js",
+    "onLanguage:html",
+    "onLanguage:jsp",
+    "onLanguage:py",
     "onStartupFinished"
   ],
   "main": "./extension.js",
@@ -42,5 +49,6 @@
     "mocha": "^10.0.0",
     "typescript": "^4.7.4",
     "@vscode/test-electron": "^2.1.5"
-  }
+  },
+  "icon": "./icon.png"
 }

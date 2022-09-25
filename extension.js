@@ -18,11 +18,23 @@ function activate(context) {
 	barItem.text = "Generate Selectors";
 	barItem.command = "css-selector-generator.generate";
 
+	function showTab() {
+		const [curDoc] = vscode.window.visibleTextEditors;
+		const curDocFsPath = curDoc.document.uri.fsPath;
+		if(curDocFsPath.endsWith("css")){
+			barItem.show();
+		}else{
+			barItem.hide();
+		}
+	}
+	showTab()
+
+	vscode.window.onDidChangeVisibleTextEditors(showTab)
 
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "css-selector-generator" is now active!');
+	console.log('CSS Selector Generator Activated!');
 
 	const getAttributefromLine = function(attribute, line){
 		const impureLine1 = line.slice(line.indexOf(attribute.toLowerCase()));
