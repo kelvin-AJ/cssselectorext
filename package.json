@@ -23,6 +23,10 @@
     "onLanguage:py",
     "onStartupFinished"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kelvin-AJ/cssselectorext.git"
+  },
   "main": "./extension.js",
   "contributes": {
     "commands": [{
