@@ -3,7 +3,7 @@
   "displayName": "CSS selector generator",
   "publisher": "OlamilekanAjibola",
   "description": "Generates CSS with all classes and ids of HTML file selected",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.71.0"
   },

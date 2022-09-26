@@ -34,4 +34,7 @@ Generate Selector Tab runs at startup. Only visible when a css file is open
 
 You can generate selectors over css files with content. CSS Selector generator would only generate selctors for classes and ids not present on page.
 
+## 0.0.4
+Major bug fix, 0.0.3 did not work as planned.
+
 **Olamilekan Ajibola**
