@@ -5,7 +5,7 @@ CSS Selector generator generates CSS selectors for all classes and ids in any HT
 
 ## Features
 
-Easily accessible 'Generate CSS' button once activated. Make sure to have the empty CSS opened up before clicking the button as CSS Selector generator would write over whatever file is opened. If extension does not initialize at start-up, Activate CSS Selector initialize uing the command palette.
+Easily accessible 'Generate CSS' button once activated. If you have written some CSS already, CSS Selector generator would only generate selctors for classes and ids not present in the current file. If extension does not initialize at start-up, Activate CSS Selector initialize uing the command palette.
 ![](img/ext_1.png)
 ![](img/ext_2.png)
 ![](img/ext_3.png)
@@ -29,5 +29,9 @@ Initial release of CSS Selector generator
 ### 0.0.2
 
 Generate Selector Tab runs at startup. Only visible when a css file is open
+
+### 0.0.3
+
+You can generate selectors over css files with content. CSS Selector generator would only generate selctors for classes and ids not present on page.
 
 **Olamilekan Ajibola**
