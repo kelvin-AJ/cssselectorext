@@ -23,10 +23,8 @@ function activate(context) {
 	function showTab() {
 		[curDoc] = vscode.window.visibleTextEditors;
 		curDocFsPath = curDoc?.document.uri.fsPath;
-		if(curDocFsPath.endsWith("css")){
-			barItem.show();
-		}else{
-			barItem.hide();
+		if(curDocFsPath){
+		curDocFsPath.endsWith("css") ? barItem.show():barItem.hide()
 		}
 	}
 	showTab()
