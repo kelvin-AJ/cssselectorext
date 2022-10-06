@@ -17,12 +17,12 @@ function activate(context) {
 	barItem.text = "$(edit) Generate Selectors";
 	barItem.command = "css-selector-generator.generate";
 	let [curDoc] = vscode.window.visibleTextEditors;
-	let curDocFsPath = curDoc.document.uri.fsPath;
-	let curFileContent = fs.readFileSync(curDocFsPath, {encoding:'utf8', flag:'r'})
+	let curDocFsPath = curDoc?.document.uri.fsPath;
+	let curFileContent ;
 
 	function showTab() {
 		[curDoc] = vscode.window.visibleTextEditors;
-		curDocFsPath = curDoc.document.uri.fsPath;
+		curDocFsPath = curDoc?.document.uri.fsPath;
 		if(curDocFsPath.endsWith("css")){
 			barItem.show();
 		}else{
@@ -60,7 +60,7 @@ function activate(context) {
 	
 	const getAttributeStrings = function(document) {
 		[curDoc] = vscode.window.visibleTextEditors;
-		curDocFsPath = curDoc.document.uri.fsPath;
+		curDocFsPath = curDoc?.document.uri.fsPath;
 		curFileContent = fs.readFileSync(curDocFsPath, {encoding:'utf8', flag:'r'})
 
 		const newString = document + "";
@@ -156,7 +156,7 @@ table {
 		});
 		const data = fs.readFileSync(htmlFile.fsPath, {encoding:'utf8', flag:'r'});
 		const [curDoc] = vscode.window.visibleTextEditors;
-		const curDocFsPath = curDoc.document.uri.fsPath;
+		const curDocFsPath = curDoc?.document.uri.fsPath;
 		curFileContent = fs.readFileSync(curDocFsPath, {encoding:'utf8', flag:'r'})
 		
 		let output;

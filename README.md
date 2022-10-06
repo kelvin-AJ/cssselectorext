@@ -40,4 +40,7 @@ Major bug fix, 0.0.3 did not work as planned.
 ## 1.0.1
 Minor bug fixes
 
+## 1.0.2
+Minor bug fixes
+
 **Olamilekan Ajibola**
