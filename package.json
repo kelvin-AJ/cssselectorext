@@ -3,7 +3,7 @@
   "displayName": "CSS selector generator",
   "publisher": "OlamilekanAjibola",
   "description": "Generates CSS with all classes and ids of HTML file selected",
-  "version": "0.0.4",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.71.0"
   },
@@ -11,7 +11,7 @@
     "Formatters"
   ],
   "keywords": [
-    "css", "CSS", "Selector", "generator", "Generator"
+    "css", "CSS", "selector", "generator", "Generator", "CSS Selector", "css selector"
   ],
   "activationEvents": [
     "onCommand:css-selector-generator.initialize",

@@ -37,4 +37,7 @@ You can generate selectors over css files with content. CSS Selector generator w
 ## 0.0.4
 Major bug fix, 0.0.3 did not work as planned.
 
+## 1.0.1
+Minor bug fixes
+
 **Olamilekan Ajibola**
