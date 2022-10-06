@@ -11,11 +11,10 @@ let arr;
  */
 
 
-
-
 function activate(context) {
-	const barItem = vscode.window.createStatusBarItem("stuff", 1, 1)
-	barItem.text = "Generate Selectors";
+	const barItem = vscode.window.createStatusBarItem("stuff", 1, 1);
+	barItem.name= "Generate CSS Selectors from HTML file"
+	barItem.text = "$(edit) Generate Selectors";
 	barItem.command = "css-selector-generator.generate";
 	let [curDoc] = vscode.window.visibleTextEditors;
 	let curDocFsPath = curDoc.document.uri.fsPath;
@@ -146,7 +145,7 @@ table {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('css-selector-generator.generate', async function() {
-
+		try{
 		const [htmlFile] = await vscode.window.showOpenDialog({
 			openLabel : "Generate Selectors",
 			canSelectMany : false,
@@ -155,7 +154,6 @@ table {
 				"HTML" : ['html', 'htm']
 			}
 		});
-	
 		const data = fs.readFileSync(htmlFile.fsPath, {encoding:'utf8', flag:'r'});
 		const [curDoc] = vscode.window.visibleTextEditors;
 		const curDocFsPath = curDoc.document.uri.fsPath;
@@ -173,13 +171,15 @@ table {
 		fs.writeFileSync(curDocFsPath, output, )
 		
 		vscode.window.showInformationMessage('Thanks for using CSS Selector Generator!');
-		
+	}catch(error){
+		vscode.window.showInformationMessage('No file selected!');
+	}
+
 	})
 
 	let initializer = vscode.commands.registerCommand('css-selector-generator.initialize', function () {
-		// The code you place here will be executed every time your command is executed
+		
 		barItem.show()
-
 		vscode.window.showInformationMessage('CSS Selector Generator initialized');
 	});
 
