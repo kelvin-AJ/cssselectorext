@@ -1,9 +1,9 @@
 {
   "name": "css-selector-generator",
-  "displayName": "CSS selector generator",
+  "displayName": "CSS selector generator [CSG]",
   "publisher": "OlamilekanAjibola",
   "description": "Generates CSS with all classes and ids of HTML file selected",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.71.0"
   },

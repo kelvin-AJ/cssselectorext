@@ -40,5 +40,10 @@ Major bug fix, 0.0.3 did not work as planned.
 ## 1.0.1, 1.0.2, 1.0.3
 Minor bug fixes
 
+## 1.1.0
+CSS rest replaced by a more reasonable version.
+Documents now need to be saved to avoid version conflicts.
+Minor bug fixes
+
 
 **Olamilekan Ajibola**
