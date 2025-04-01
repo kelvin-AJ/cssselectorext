@@ -12,6 +12,7 @@ Easily accessible 'Generate CSS' button once activated. If you have written some
 
 
 ## Support
+Support my bugs... I mean, debugging!☕: buymeacoffee.com/kelvin.ajibola
 
 Email: 'kelajibola@gmail.com' for suggestions, bugs, or complaints while using the extension. Also, Thank you so much for considering using CSS selector generator. You make everything worth it! 
 
