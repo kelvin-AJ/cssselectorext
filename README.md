@@ -31,20 +31,14 @@ Initial release of CSS Selector generator
 
 Generate Selector Tab runs at startup. Only visible when a css file is open
 
-### 0.0.3
 
-You can generate selectors over css files with content. CSS Selector generator would only generate selctors for classes and ids not present on page.
-
-## 0.0.4
-Major bug fix, 0.0.3 did not work as planned.
-
-## 1.0.1, 1.0.2, 1.0.3
-Minor bug fixes
 
 ## 1.1.0
 CSS rest replaced by a more reasonable version.
 Documents now need to be saved to avoid version conflicts.
 Minor bug fixes
 
+## 1.1.1
+Selectors can be generated for .ejs, .jsp, and .php files as well
 
 **Olamilekan Ajibola**

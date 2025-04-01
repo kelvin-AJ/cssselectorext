@@ -17,12 +17,12 @@ function activate(context) {
 	barItem.text = "$(edit) Generate Selectors";
 	barItem.command = "css-selector-generator.generate";
 	let [curDoc] = vscode.window.visibleTextEditors;
-	let curDocFsPath = curDoc?.document.uri.fsPath;
+	let curDocFsPath = curDoc && curDoc.document && curDoc.document.uri && curDoc.document.uri.fsPath;
 	let curFileContent ;
 
 	function showTab() {
 		[curDoc] = vscode.window.visibleTextEditors;
-		curDocFsPath = curDoc?.document.uri.fsPath;
+		curDocFsPath = curDoc && curDoc.document && curDoc.document.uri && curDoc.document.uri.fsPath;
 		if(curDocFsPath){
 		curDocFsPath.endsWith("css") ? barItem.show():barItem.hide()
 		}
@@ -52,7 +52,7 @@ function activate(context) {
 	
 	const getAttributeStrings = function(document) {
 		[curDoc] = vscode.window.visibleTextEditors;
-		curDocFsPath = curDoc?.document.uri.fsPath;
+		curDocFsPath = curDoc && curDoc.document && curDoc.document.uri && curDoc.document.uri.fsPath;
 		curFileContent = fs.readFileSync(curDocFsPath, {encoding:'utf8', flag:'r'})
 
 		const newString = document + "";
@@ -119,12 +119,12 @@ function activate(context) {
 			canSelectMany : false,
 			title: "CSS Selector Generator",
 			filters : {
-				"HTML" : ['html', 'htm']
+				"HTML and Templates" : ['html', 'htm', 'ejs', 'jsp', 'php']
 			}
 		});
 		const data = fs.readFileSync(htmlFile.fsPath, {encoding:'utf8', flag:'r'});
 		const [curDoc] = vscode.window.visibleTextEditors;
-		const curDocFsPath = curDoc?.document.uri.fsPath;
+		const curDocFsPath = curDoc && curDoc.document && curDoc.document.uri && curDoc.document.uri.fsPath;
 		curFileContent = fs.readFileSync(curDocFsPath, {encoding:'utf8', flag:'r'})
 		
 		let output;
@@ -140,7 +140,7 @@ function activate(context) {
 		
 		vscode.window.showInformationMessage('Thanks for using CSS Selector Generator!');
 	}catch(error){
-		vscode.window.showInformationMessage('No HTML file selected!');
+		vscode.window.showInformationMessage('Something might have gone wrong!');
 	}
 
 	})

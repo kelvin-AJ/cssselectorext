@@ -3,7 +3,7 @@
   "displayName": "CSS selector generator [CSG]",
   "publisher": "OlamilekanAjibola",
   "description": "Generates CSS with all classes and ids of HTML file selected",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "engines": {
     "vscode": "^1.71.0"
   },
@@ -11,7 +11,13 @@
     "Formatters"
   ],
   "keywords": [
-    "css", "CSS", "selector", "generator", "Generator", "CSS Selector", "css selector"
+    "css",
+    "CSS",
+    "selector",
+    "generator",
+    "Generator",
+    "CSS Selector",
+    "css selector"
   ],
   "activationEvents": [
     "onCommand:css-selector-generator.initialize",
@@ -29,14 +35,16 @@
   },
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "css-selector-generator.generate",
-      "title": "CSS Selector Generator"
-    },
-    {
-      "command": "css-selector-generator.initialize",
-      "title": "CSS Selector Initialize"
-    }]
+    "commands": [
+      {
+        "command": "css-selector-generator.generate",
+        "title": "CSS Selector Generator"
+      },
+      {
+        "command": "css-selector-generator.initialize",
+        "title": "CSS Selector Initialize"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
@@ -47,11 +55,13 @@
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "16.x",
+    "@vscode/test-electron": "^2.1.5",
+    "esbuild": "^0.25.2",
     "eslint": "^8.20.0",
     "glob": "^8.0.3",
     "mocha": "^10.0.0",
-    "typescript": "^4.7.4",
-    "@vscode/test-electron": "^2.1.5"
+    "typescript": "^4.7.4"
   },
-  "icon": "img/icon.png"
+  "icon": "img/icon.png",
+  "packageManager": "pnpm@10.7.0+sha512.6b865ad4b62a1d9842b61d674a393903b871d9244954f652b8842c2b553c72176b278f64c463e52d40fff8aba385c235c8c9ecf5cc7de4fd78b8bb6d49633ab6"
 }
