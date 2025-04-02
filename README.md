@@ -38,8 +38,8 @@ Generate Selector Tab runs at startup. Only visible when a CSS file is open.
 - Documents now need to be saved to avoid version conflicts.  
 - Minor bug fixes.  
 
-## 1.1.1
+## 1.1.2
 
-- Selectors can be generated for `.ejs`, `.jsp`, and `.php` files as well.  
+- Selectors can be generated for `.ejs`, `.jsp`, and `.php` files as well.  Updated Readme
 
 **Olamilekan Ajibola**
