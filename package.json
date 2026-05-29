@@ -3,7 +3,7 @@
   "displayName": "CSS selector generator [CSG]",
   "publisher": "OlamilekanAjibola",
   "description": "Generates CSS with all classes and ids of HTML file selected",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "engines": {
     "vscode": "^1.71.0"
   },
@@ -53,6 +53,15 @@
         "title": "CSS Selector Initialize"
       }
     ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "css-selector-generator.generate",
+          "when": "resourceLangId == css || resourceLangId == scss || resourceLangId == less || resourceLangId == sass",
+          "group": "1_modification"
+        }
+      ]
+    },
     "configuration": {
       "title": "CSS Selector Generator",
       "properties": {

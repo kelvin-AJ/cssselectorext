@@ -31,7 +31,7 @@ Email: [kelajibola@gmail.com](mailto:kelajibola@gmail.com) for suggestions, bugs
 
 ## Release Notes
 
-### 2.0.0 (Massive Upgrade)
+### 2.1.0 (Minor Update)
 - **New**: Interactive multi-select QuickPick menu to choose exact selectors!
 - **New**: Full support for React/JSX, Vue, Svelte, SCSS, LESS, and SASS.
 - **New**: Settings added for `insertAtCursor` and `includeReset`.
