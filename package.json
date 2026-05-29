@@ -3,7 +3,7 @@
   "displayName": "CSS selector generator [CSG]",
   "publisher": "OlamilekanAjibola",
   "description": "Generates CSS with all classes and ids of HTML file selected",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "engines": {
     "vscode": "^1.71.0"
   },
@@ -27,13 +27,21 @@
     "onLanguage:html",
     "onLanguage:jsp",
     "onLanguage:py",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:vue",
+    "onLanguage:svelte",
+    "onLanguage:scss",
+    "onLanguage:less",
+    "onLanguage:sass",
     "onStartupFinished"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/kelvin-AJ/cssselectorext.git"
   },
-  "main": "./extension.js",
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
@@ -44,17 +52,35 @@
         "command": "css-selector-generator.initialize",
         "title": "CSS Selector Initialize"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "CSS Selector Generator",
+      "properties": {
+        "css-selector-generator.includeReset": {
+          "type": "boolean",
+          "default": true,
+          "description": "Inject a global CSS reset (* { margin: 0; border: 0; }) into new CSS files."
+        },
+        "css-selector-generator.insertAtCursor": {
+          "type": "boolean",
+          "default": false,
+          "description": "Insert generated selectors at the current cursor position instead of appending to the bottom."
+        }
+      }
+    }
   },
   "scripts": {
     "lint": "eslint .",
-    "pretest": "npm run lint",
+    "compile": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
+    "watch": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --watch",
+    "pretest": "npm run compile && npm run lint",
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "16.x",
+    "@types/vscode": "^1.71.0",
     "@vscode/test-electron": "^2.1.5",
     "esbuild": "^0.25.2",
     "eslint": "^8.20.0",
